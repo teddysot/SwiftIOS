@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stacker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="BKc-88-Sqr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATF-9M-wba">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="180.5"/>
+                                        <state key="normal" title="RED">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.046545039429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="redButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e3w-lU-LYq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNK-Pu-yy6">
+                                        <rect key="frame" x="0.0" y="243.5" width="375" height="180"/>
+                                        <state key="normal" title="YELLOW">
+                                            <color key="titleColor" red="1" green="0.91600664109999996" blue="0.00193524558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Nr-rj-jQI">
+                                        <rect key="frame" x="0.0" y="486.5" width="375" height="180.5"/>
+                                        <state key="normal" title="GREEN">
+                                            <color key="titleColor" red="0.0020097530459999998" green="1" blue="0.044006684409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ATF-9M-wba" firstAttribute="width" secondItem="BKc-88-Sqr" secondAttribute="width" id="3q8-Ud-GYV"/>
+                                    <constraint firstItem="6Nr-rj-jQI" firstAttribute="width" secondItem="BKc-88-Sqr" secondAttribute="width" id="mNK-YE-hyy"/>
+                                    <constraint firstItem="gNK-Pu-yy6" firstAttribute="width" secondItem="BKc-88-Sqr" secondAttribute="width" id="y4u-iV-XHQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BKc-88-Sqr" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="29I-h9-iUt"/>
+                            <constraint firstItem="BKc-88-Sqr" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="KxS-AU-L7I"/>
+                            <constraint firstItem="BKc-88-Sqr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lm2-tk-Hdz"/>
+                            <constraint firstItem="BKc-88-Sqr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mQl-mz-Zav"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="greenButton" destination="6Nr-rj-jQI" id="AWe-pO-e3Z"/>
+                        <outlet property="redButton" destination="ATF-9M-wba" id="czn-bR-ZcR"/>
+                        <outlet property="yellowButton" destination="gNK-Pu-yy6" id="V4K-Ln-VNY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
