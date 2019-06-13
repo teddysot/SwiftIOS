@@ -39,7 +39,7 @@ class Deck
     func ConstructName(forIndexpath idx:IndexPath) -> String{
         var name = "NULL";
         
-        let row = idx.row
+        let row = idx.row + idx.section * 13
         var section = idx.section
         
         

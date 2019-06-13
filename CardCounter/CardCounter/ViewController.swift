@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -78,13 +78,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let cell = UITableViewCell()
         
-        let cardname = deck.ConstructName(forIndexpath: indexPath)
-        let cardurl = deck.ConstructURL(index: indexPath.row)
-        let count = GetCounter(forIndexpath: indexPath)
+        if(indexPath.section == 4){
+            cell.imageView?.image = nil
+            cell.textLabel?.text = "RESET"
+        }
+        else{
+            let cardname = deck.ConstructName(forIndexpath: indexPath)
+            let cardurl = deck.ConstructURL(index: indexPath.row + indexPath.section * 13)
+            let count = GetCounter(forIndexpath: indexPath)
             
-        cell.textLabel?.text = "\(cardname)                         \(count)"
-        cell.imageView?.image = UIImage(named: cardurl)
-        
+            cell.textLabel?.text = "\(cardname)                         \(count)"
+            cell.imageView?.image = UIImage(named: cardurl)
+        }
         return cell
     }
     
