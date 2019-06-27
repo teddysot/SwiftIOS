@@ -71,6 +71,7 @@ class GameScene: SKScene {
   
   // 1
   let player = SKSpriteNode(imageNamed: "player")
+  var monstersDestroyed = 0
   
   override func didMove(to view: SKView) {
     // 2
