@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5704DDEF22E01A2A00A88DB7 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5704DDEE22E01A2A00A88DB7 /* GameKit.framework */; };
 		5774E15122C46A27002442E3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5774E15022C46A27002442E3 /* LoginViewController.swift */; };
 		5774E15322C46B46002442E3 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5774E15222C46B46002442E3 /* AlertController.swift */; };
 		5C2901831F8F6DE700803663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5704DDEE22E01A2A00A88DB7 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		5774E15022C46A27002442E3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = NinjaAttack/LoginViewController.swift; sourceTree = "<group>"; };
 		5774E15222C46B46002442E3 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertController.swift; path = NinjaAttack/AlertController.swift; sourceTree = "<group>"; };
 		5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = NinjaAttack/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,12 +43,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5704DDEF22E01A2A00A88DB7 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5704DDED22E01A2A00A88DB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5704DDEE22E01A2A00A88DB7 /* GameKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AFD63F8C203649F800E08C66 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +73,7 @@
 			children = (
 				D2A5F2021F4A9144005CD714 /* NinjaAttack */,
 				D2A5F2011F4A9144005CD714 /* Products */,
+				5704DDED22E01A2A00A88DB7 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -128,6 +140,11 @@
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -311,10 +328,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8E45Q8WZ7C;
 				INFOPLIST_FILE = "$(SRCROOT)/NinjaAttack/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.NinjaAttack;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vfs.adviosNinjaTeddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -330,10 +347,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8E45Q8WZ7C;
 				INFOPLIST_FILE = "$(SRCROOT)/NinjaAttack/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.NinjaAttack;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vfs.adviosNinjaTeddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
